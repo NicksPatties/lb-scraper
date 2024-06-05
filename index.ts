@@ -1,7 +1,23 @@
+import fs from 'node:fs/promises'
 import { chromium } from 'playwright';
 
 const log = (...strings: string[]) => console.log("[lb-scrape]", ...strings)
 
+let file : fs.FileHandle;
+
+// Opening the file
+try {
+  file = await fs.open('./bizkit-data.csv', "r+")
+} catch (e) {
+  console.error('Failed to open the data file. Exiting.')
+  process.exit(1)
+}
+
+await file.write("fart\n")
+await file.write("fart again\n")
+await file.close()
+
+// Running the scraper
 const browser = await chromium.launch();
 const context = await browser.newContext();
 const page = await context.newPage()
