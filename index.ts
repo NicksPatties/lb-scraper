@@ -12,7 +12,7 @@ await page.goto('https://www.setlist.fm/setlists/limp-bizkit-33d69c2d.html')
 
 log("Let's try and grab something!")
 
-const setLinks = (await page.locator('a.summary.url').all()).slice(0, 1)
+const setLinks = await page.locator('a.summary.url').all()
 
 for (const setLink of setLinks){
   const linkContent = await setLink.innerText()

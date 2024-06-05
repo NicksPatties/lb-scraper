@@ -1,0 +1,320 @@
+[lb-scrape] Opening Limp Bizkit's setlist page
+[lb-scrape] Let's try and grab something!
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Sonic Temple 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Sonic Temple 2024 on May 19, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: Thieves
+[lb-scrape]   info: (Ministry cover) (short version)
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: (until the second chorus)
+[lb-scrape]   title: Full Nelson
+[lb-scrape]   info: (with fan)
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Sonic Temple 2024 on May 19, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Welcome to Rockville 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Welcome to Rockville 2024 on May 10, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover) (with Jelly Roll)
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: (Fred does a gender reveal)
+[lb-scrape]   title: Tip Toe Wing In My Jawwdinz
+[lb-scrape]   info: (RiFF RAFF cover) (with RiFF RAFF)
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: Heart-Shaped Box
+[lb-scrape]   info: (Nirvana cover) (partial)
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: (Fred brings kids on stage)
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Welcome to Rockville 2024 on May 10, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Lollapalooza Brazil 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Lollapalooza Brazil 2024 on March 23, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Boiler
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Lollapalooza Brazil 2024 on March 23, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Estéreo Picnic 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Estéreo Picnic 2024 on March 21, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Boiler
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Estéreo Picnic 2024 on March 21, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Asunciónico 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Asunciónico 2024 on March 19, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Turn It Up, Bitch
+[lb-scrape]   info: (John Otto rapping, Fred Durst introducing the band)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: (preceded by 'Master of Puppets' snippet)
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Re-Arranged
+[lb-scrape]   info: (preceded by 'Jerry Was a Race Car Driver' snippet)
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: (with fan Agus on vocals as guest)
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Asunciónico 2024 on March 19, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Lollapalooza Argentina 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Lollapalooza Argentina 2024 on March 17, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Turn It Up, Bitch
+[lb-scrape]   info: (John Otto rapping, Fred Durst introducing the band)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: (Song stopped in order for medical assistance to be provided to a fan)
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Full Nelson
+[lb-scrape]   info: 
+[lb-scrape]   title: Re-Arranged
+[lb-scrape]   info: (preceded by 'Jerry Was a Race Car Driver' snippet)
+[lb-scrape]   title: Killing in the Name
+[lb-scrape]   info: (Rage Against the Machine cover)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Lollapalooza Argentina 2024 on March 17, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Lollapalooza Chile 2024
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Lollapalooza Chile 2024 on March 15, 2024 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: (preceded by 'Master of Puppets' snippet)
+[lb-scrape]   title: Heart-Shaped Box
+[lb-scrape]   info: (Nirvana cover) (First verse and chorus only)
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Turn It Up, Bitch
+[lb-scrape]   info: (live debut)
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: (preceded by 'Master of Puppets' and 'South of Heaven' snippets)
+[lb-scrape]   title: Boiler
+[lb-scrape]   info: 
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Lollapalooza Chile 2024 on March 15, 2024 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at John Cain Arena, Melbourne, Australia
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at John Cain Arena, Melbourne on December 8, 2023 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Show Me What You Got
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Livin' It Up
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: Behind Blue Eyes
+[lb-scrape]   info: (The Who cover)
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: Boiler
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Full Nelson
+[lb-scrape]   info: 
+[lb-scrape]   title: Heart-Shaped Box / Smells Like Teen Spirit
+[lb-scrape]   info: (Nirvana cover)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: (Reprise)
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at John Cain Arena, Melbourne on December 8, 2023 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Fortitude Music Hall, Brisbane, Australia
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Fortitude Music Hall, Brisbane on December 6, 2023 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Dirty Rotten Bizkit
+[lb-scrape]   info: (first time opening a show)
+[lb-scrape]   title: Show Me What You Got
+[lb-scrape]   info: 
+[lb-scrape]   title: 9 Teen 90 Nine
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: Pollution
+[lb-scrape]   info: (Played until the first chorus)
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Full Nelson
+[lb-scrape]   info: 
+[lb-scrape]   title: Re-Arranged
+[lb-scrape]   info: 
+[lb-scrape]   title: Killing in the Name
+[lb-scrape]   info: (Rage Against the Machine cover)
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Boiler
+[lb-scrape]   info: 
+[lb-scrape]   title: Faith
+[lb-scrape]   info: (George Michael cover)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Fortitude Music Hall, Brisbane on December 6, 2023 | setlist.fm
+[lb-scrape] Page closed
+[lb-scrape] Opening new page... 
+[lb-scrape] Navigating to setlist set list page Limp Bizkit at Good Things Brisbane 2023
+[lb-scrape] Now we're on the new page! Limp Bizkit Concert Setlist at Good Things Brisbane 2023 on December 3, 2023 | setlist.fm
+[lb-scrape] Now lets get some data...
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: 
+[lb-scrape]   title: Show Me What You Got
+[lb-scrape]   info: 
+[lb-scrape]   title: Hot Dog
+[lb-scrape]   info: 
+[lb-scrape]   title: Rollin' (Air Raid Vehicle)
+[lb-scrape]   info: 
+[lb-scrape]   title: My Way
+[lb-scrape]   info: 
+[lb-scrape]   title: My Generation
+[lb-scrape]   info: 
+[lb-scrape]   title: Take a Look Around
+[lb-scrape]   info: 
+[lb-scrape]   title: Nookie
+[lb-scrape]   info: 
+[lb-scrape]   title: Re-Arranged
+[lb-scrape]   info: (until the bridge)
+[lb-scrape]   title: Break Stuff
+[lb-scrape]   info: (Reprise)
+[lb-scrape] Data retrieved!
+[lb-scrape] Closing page Limp Bizkit Concert Setlist at Good Things Brisbane 2023 on December 3, 2023 | setlist.fm
+[lb-scrape] Page closed
