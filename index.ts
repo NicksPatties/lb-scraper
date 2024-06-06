@@ -19,61 +19,59 @@ const browser = await chromium.launch();
 const context = await browser.newContext();
 const page = await context.newPage()
 
-log("Opening Limp Bizkit's setlist page...")
+const pages = 104
+let currPage = 50
 
-await page.goto('https://www.setlist.fm/setlists/limp-bizkit-33d69c2d.html')
+while (currPage <= pages) {
+  log(`Opening Limp Bizkit's setlist page ${currPage}...`)
 
-log("Limp Bizkit's setlist page opened")
+  await page.goto(`https://www.setlist.fm/setlists/limp-bizkit-33d69c2d.html?page=${currPage}`)
 
-const setLinks = await page.locator('a.summary.url').all()
+  log(`Limp Bizkit's setlist page ${currPage} opened`)
 
-for (const setLink of setLinks) {
-  const linkContent = await setLink.innerText()
-  const setLinkUrl: string | null = await setLink.getAttribute('href')
+  const setLinks = await page.locator('a.summary.url').all()
 
-  if (!setLinkUrl) {
-    log(`Whoops! Couldn't find a setlist URL! Continuing...`)
-    continue;
-  }
+  for (const setLink of setLinks) {
+    const linkContent = await setLink.innerText()
+    const setLinkUrl: string | null = await setLink.getAttribute('href')
 
-  log(`Opening page ${setLinkUrl}... `)
-
-  const setLinkPage = await context.newPage()
-
-  log(`Navigating to setlist set list page ${linkContent}`)
-
-  await setLinkPage.goto(`https://www.setlist.fm/${setLinkUrl.slice(3)}`)
-  const setLinkPageTitle = await setLinkPage.title()
-
-  log("Now we're on the new page!", setLinkPageTitle)
-
-  log("Now lets get some data...")
-
-  const songData = await setLinkPage.locator(".setlistParts.song").all()
-
-  let writtenSongCount = 0
-
-  for (const song of songData) {
-    const title = await song.locator(".songPart").innerText();
-    const info = await song.locator(".infoPart").innerText();
-    if (!title) {
-      log(`Whoops! Song title doesn't exist for some reason... Continuing...`)
+    if (!setLinkUrl) {
+      log(`Whoops! Couldn't find a setlist URL! Continuing...`)
       continue;
     }
-    const row = `${title}\t${info}\t${linkContent}`
-    log(`Writing ${row} to ${fileName}`)
-    file.write(`${row}\n`)
-    writtenSongCount++;
-    log(`Writing ${row} to ${fileName} complete!`)
+
+    const setLinkPage = await context.newPage()
+
+    log(`Opening setlist page ${linkContent}...`)
+
+    await setLinkPage.goto(`https://www.setlist.fm/${setLinkUrl.slice(3)}`)
+
+    log(`Setlist page ${linkContent} opened`)
+
+    const songData = await setLinkPage.locator(".setlistParts.song").all()
+
+    let writtenSongCount = 0
+
+    log(`Writing songs data to ${fileName}...`)
+    for (const song of songData) {
+      const title = await song.locator(".songPart").innerText();
+      const info = await song.locator(".infoPart").innerText();
+      if (!title) {
+        log(`Whoops! Song title doesn't exist for some reason... Continuing...`)
+        continue;
+      }
+      const row = `${title}\t${info}\t${linkContent}`
+      file.write(`${row}\n`)
+      writtenSongCount++;
+    }
+
+    log(`Wrote ${writtenSongCount} ${writtenSongCount === 1 ? "song" : "songs"} to ${fileName}`);
+
+    await setLinkPage.close()
   }
-
-  log(`Wrote ${writtenSongCount} ${writtenSongCount === 1 ? "song" : "songs"} to ${fileName}`);
-
-  log(`Closing page ${setLinkPageTitle}...`)
-
-  await setLinkPage.close()
-  log(`Page ${setLinkPageTitle} closed`)
+  currPage++
 }
+
 
 log(`Scraping completed! Closing browser...`)
 await browser.close();
