@@ -3,15 +3,25 @@
   "name": "lbpp",
   "version": "0.0.1",
   "description": "",
+  "scripts": {
+    "compile": "swc index.ts -o index.js",
+    "scrape": "node .",
+    "cs": "pnpm compile ; pnpm scrape",
+    "clean": "rm index.js",
+    "clean:logs": "rm logs/*"
+  },
   "main": "index.js",
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^20.12.12"
-  },
   "dependencies": {
-    "playwright": "^1.44.0"
+    "playwright": "^1.44.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.25",
+    "@types/node": "^20.12.12"
   }
 }

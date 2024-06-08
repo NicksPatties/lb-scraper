@@ -1,4 +1,6 @@
 # Scraper information
+logs/
+index.js
 node_modules/
 /test-results/
 /playwright-report/
