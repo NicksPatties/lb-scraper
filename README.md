@@ -2,9 +2,9 @@
 
 Limp Bizkit brings an audience member on stage to perform with them every once in a while. 
 
-- [A fan performs Full Nelson at Sonic Temple 2024](https://www.instagram.com/p/C7Mt0JYN3sk/)
-- [Fans on bass and guitar at Zeltfestival 2018](https://www.youtube.com/watch?v=G4xbg4OCMGg)
-- [Fan performs My Way at Haus Auensee in 2015](https://youtu.be/r8e9KPY64DA)
+- [A fan performs _Full Nelson_ at Sonic Temple 2024](https://www.instagram.com/p/C7Mt0JYN3sk/)
+- [Fans on guitar at Zeltfestival 2018](https://www.youtube.com/watch?v=G4xbg4OCMGg)
+- [Fan performs _My Way_ at Haus Auensee in 2015](https://youtu.be/r8e9KPY64DA)
 
 If my friend and I are going to see them live, what songs should we learn to be the most prepared to perform a song with them and kill it?
 
@@ -27,9 +27,35 @@ I'll use Playwright to scrape the data. Here's the data I'm looking for:
 ## Method
 
 1. Go to Limp Bizkit's setlist.fm page
-2. Click the first link in the list of setlists
-3. Read the contents of the setlist
-4. Add it in a CSV
-5. Use a Spreadsheet to analyze the data
+2. Click each link in the list of set lists
+3. Read the song list of each 
+4. Write the song data to STDOUT
+5. Use a spreadsheet application to analyze the data
 
+## Installation
 
+Install the dependencies.
+
+```sh
+npm install
+```
+
+Compile the TypeScript `index.ts` file
+
+```sh
+npm run compile
+```
+
+Run the `index.js` file to start scraping.
+
+```sh
+node .
+```
+
+```sh
+Usage: node . [-s <number>] [-e <number>]
+   -s <number>
+     start scraping at page <number> (1 by default)
+   -e <number>
+     end scraping at page <number> (104 by default)
+```
