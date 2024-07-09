@@ -6,7 +6,7 @@ Limp Bizkit brings an audience member on stage to perform with them every once i
 
 - [A fan performs _Full Nelson_ at Sonic Temple 2024](https://www.instagram.com/p/C7Mt0JYN3sk/)
 - [Fans on guitar at Zeltfestival 2018](https://www.youtube.com/watch?v=G4xbg4OCMGg)
-- [Fan performs _My Way_ at Haus Auensee in 2015](https://youtu.be/r8e9KPY64DA)
+- [Fans perform _Take A Look Around_ at Motorpoint Arena, England](https://www.youtube.com/watch?v=J1HPRFqZlik)
 
 If my friend and I are going to see them live, **what songs should we learn to be the most prepared to perform a song with them and kill it?**
 
