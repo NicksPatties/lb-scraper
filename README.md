@@ -37,28 +37,8 @@ I'll use Playwright to scrape the data. Here's the data I'm looking for:
 
 ## Installation
 
-Install the dependencies.
+This package uses `bun` to run.
 
 ```sh
-npm install
-```
-
-Compile the TypeScript `index.ts` file
-
-```sh
-npm run compile
-```
-
-Run the `index.js` file to start scraping.
-
-```sh
-node .
-```
-
-```sh
-Usage: node . [-s <number>] [-e <number>]
-   -s <number>
-     start scraping at page <number> (1 by default)
-   -e <number>
-     end scraping at page <number> (104 by default)
+bun run .
 ```
