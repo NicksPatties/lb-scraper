@@ -11,6 +11,12 @@
     "jsdom": "^24.1.0"
   },
   "devDependencies": {
-    "@types/jsdom": "^21.1.7"
+    "@types/jsdom": "^21.1.7",
+    "@types/bun": "latest"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
