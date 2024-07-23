@@ -1,6 +1,21 @@
 import axios, { type AxiosRequestConfig } from 'axios';
 import { JSDOM } from 'jsdom';
-import { getSong, addSong } from './db';
+import {
+  getDateFromDom,
+  getVenueFromDom,
+  DOMNotFoundError,
+  TextContentNotFoundError,
+  getSongFromDom,
+  getNotesFromDom
+} from './dom'
+import {
+  getSong,
+  addSong,
+  getConcert,
+  addConcert,
+  addPerformance,
+  getPerformance
+} from './db';
 
 /**
   Adds a song to the database. If the song is already in the database, then do nothing.
@@ -28,8 +43,11 @@ while (res.status === 200 && page < pageLimit) {
     const notPerformed = event.querySelector("ol.list-inline") === null
     if (notPerformed) continue;
 
-    const setListLink: HTMLAnchorElement | null = event.querySelector('h2 a')
-    if (setListLink === null) continue;
+    const setListLinksSelector = 'h2 a'
+    const setListLink: HTMLAnchorElement | null = event.querySelector(setListLinksSelector)
+    if (setListLink === null) {
+      throw DOMNotFoundError(setListLinksSelector)
+    };
 
     setListUrls.push("https://setlist.fm" + setListLink.href.slice(2))
   }
@@ -39,38 +57,40 @@ while (res.status === 200 && page < pageLimit) {
 }
 
 // iterate through the setlistUrls to get individual song performances
-
-for(const url of setListUrls.slice(0,1)) {
+// TODO remove slice from list
+for (const url of setListUrls) {
   res = await axios.get(url, axiosOptions)
   if (res.status !== 200) continue
 
   const dom = new JSDOM(res.data)
 
-  // get venue and date from the DOM
-
+  const dateString = getDateFromDom(dom)
+  const venueString = getVenueFromDom(dom)
 
   // Save concert to the database
+  let concert = getConcert(venueString, dateString)
+  if (concert === null) {
+    console.log(`Concert at ${venueString} on ${dateString} doesn't exist in database. Adding it now.`)
+    const success = addConcert(venueString, dateString);
+    if (success) {
+      console.log(`Successfully added concert at ${venueString} on ${dateString}  to database`)
+    } else {
+      console.error(`Failed to save concert at ${venueString} on ${dateString} in database`)
+      continue
+    }
+    concert = getConcert(venueString, dateString)!
+  } else {
+    console.log(`Concert already in database! concertId: ${concert.concertId}`)
+  }
 
-  
   const songData = dom.window.document.querySelectorAll('li.setlistParts.song')
   let order = 0;
 
   for (const songDatum of songData) {
     order++;
+
     // Get the song from the DOM
-    const songLink = songDatum.querySelector<HTMLAnchorElement>('.songPart .songLabel')
-
-    if (songLink === null) {
-      console.error("Failed to find song link in web page. Continuing...")
-      continue
-    }
-
-    const songName: string = songLink.textContent ? songLink.textContent.trim() : ""
-
-    if (songName.length <= 0) {
-      console.error("Song name is too short. Continuing...")
-      continue
-    }
+    const songName: string = getSongFromDom(songDatum)
 
     // Save song to the database
     let song = getSong(songName)
@@ -90,11 +110,27 @@ for(const url of setListUrls.slice(0,1)) {
       console.log(`${songName} already in database! songId: ${song.songId}`)
     }
 
+    // Get notes from performance
+    const notes = getNotesFromDom(songDatum)
 
 
-    const notes: string | null = songDatum.querySelector<HTMLElement>('.infoPart small')!.textContent
+    // Save performance to the database
+    let performance = getPerformance(order, song.songId, concert.concertId)
 
-    // insert row into the database
-    order++
+    if (performance === null) {
+      // add performance to the database
+      const performanceDetails = `of ${song.name} on ${concert.date} at ${concert.venue}`
+      console.log(`Performance ${performanceDetails} doesn't exist in database. Adding it now.`)
+      const success = addPerformance(order, notes, song.songId, concert.concertId)
+      if (success) {
+        console.log(`Successfully added performance ${performanceDetails} to database`)
+      } else {
+        console.error(`Failed to save performance ${performanceDetails} in database`)
+        continue
+      }
+      performance = getPerformance(order, song.songId, concert.concertId)!
+    } else {
+      console.log(`Performance already in database! performanceId: ${performance.performanceId}`)
+    }
   }
 }

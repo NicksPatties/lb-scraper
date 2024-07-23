@@ -18,6 +18,14 @@ export type Concert = {
   venue: string
 }
 
+export type Performance = {
+  performanceId: number
+  notes: string
+  songOrder: number
+  concertId: number
+  songId: number
+}
+
 /**
   @returns {Song | null} The song data if it exists, or null if it doesn't
 */
@@ -37,10 +45,10 @@ export const addSong = (name: string): boolean => {
     // but not sure why...
     // addSongStatement.run(name)
     db.run("insert into songs (name) values (?)", [name]);
-    console.log('just added the song', name, '... now what?')
     return true
   } catch (e) {
-    console.error(`Error adding song "${name}": Perhaps it's already in the database?`)
+    console.error(`Error adding song "${name}"`)
+    console.error(e)
     return false
   }
 }
@@ -75,7 +83,7 @@ export const addConcert = (venue: string, date: string) => {
     )
     return true
   } catch (e) {
-    console.error(`Error adding concert "${venue}" at date ${date}`)
+    console.error(`Error adding concert at ${venue} on ${date}`)
     console.error(e)
     return false
   }
@@ -86,12 +94,15 @@ export const addConcert = (venue: string, date: string) => {
 
 
 /**
-  Gets a performance of a song at a concert
-  
+  @param {number} songOrder
+  @param {number} songId
+  @param {number} concertId
+  @returns {Performance | null} The performance if it exists, null if it doesn't  
 */
-export const getPerformance = () => {
-  return null;
+export const getPerformance = (songOrder: number, songId: number, concertId: number): Performance | null => {
+  return getPerformanceStatement.get(songOrder, songId, concertId) as Performance;
 }
+const getPerformanceStatement = db.prepare('select * from performances where songOrder is ? and songId is ? and concertId is ?')
 
 /**
   Adds a performance to the database
@@ -99,27 +110,21 @@ export const getPerformance = () => {
 
   @param {number} songOrder The order in which the song was played
   @param {string} notes Any interesting notes about the performance
-  @param {string} songName
-  @param {string} venue 
-  @param {string} date The date of the performance in YYYY-MM-DD format
+  @param {number} songId
+  @param {number} concertId 
   @returns true if successfully added, false if it didn't
 */
-export const addPerformance = (songOrder: number, notes: string | null, songName: string, venue: string, date: string) => {
+export const addPerformance = (
+  songOrder: number,
+  notes: string,
+  songId: number,
+  concertId: number
+) => {
   try {
-    const song = getSong(songName)
-    if (song === null) {
-      throw new Error(`Requested song ${songName} doesn't exist`)
-    }
-    const concert = getConcertStatement.get(venue, date) as Concert;
-    if (concert === null) {
-      throw new Error(`Requested concert at ${venue} on ${date} doesn't exist`)
-    }
-
-    console.log("adding new performance for song", song.songId, "and concert", concert.concertId)
-
-    addPerformanceStatement.run(songOrder, notes, concert.concertId, song.songId)
+    addPerformanceStatement.run(songOrder, notes, concertId, songId)
     return true;
   } catch (e) {
+    console.error(`Error adding performance `, songOrder, notes, songId, concertId)
     console.error(e)
     return false;
   }

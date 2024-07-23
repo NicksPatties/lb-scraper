@@ -42,3 +42,10 @@ This package uses `bun` to run.
 ```sh
 bun run .
 ```
+
+## Things
+
+- Find the element on the page
+  - If there's no element on the page, then break, since data scraping is not working
+- Find the element with the data in the database
+  - If the element is not in the database, then create it
