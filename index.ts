@@ -4,7 +4,6 @@ import {
   getDateFromDom,
   getVenueFromDom,
   DOMNotFoundError,
-  TextContentNotFoundError,
   getSongFromDom,
   getNotesFromDom
 } from './dom'

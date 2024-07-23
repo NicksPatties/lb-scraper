@@ -43,9 +43,14 @@ This package uses `bun` to run.
 bun run .
 ```
 
-## Things
+## Querying the database
 
-- Find the element on the page
-  - If there's no element on the page, then break, since data scraping is not working
-- Find the element with the data in the database
-  - If the element is not in the database, then create it
+**What is the song that is most commonly performed with fans?**
+
+## Benchmarking
+
+Requires [hyperfine](https://github.com/sharkdp/hyperfine) to work.
+
+```sh
+hyperfine 'bun run . ; sqlite3 data/lb.db ".read clean.sql"'
+```
