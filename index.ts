@@ -23,7 +23,7 @@ import {
 */
 
 let page = 1
-const pageLimit = 2
+const pageLimit = 105 // inclusive todo make this read the dom from 
 const setListUrls: string[] = []
 const axiosOptions: AxiosRequestConfig = {
   validateStatus: (status) => status < 500
@@ -33,7 +33,7 @@ const lbUrlBase = "https://www.setlist.fm/setlists/limp-bizkit-33d69c2d.html?pag
 let res = await axios.get(lbUrlBase + page, axiosOptions)
 
 // iterate through the concert list pages and get URLs for each set list
-while (res.status === 200 && page < pageLimit) {
+while (res.status === 200 && page <= pageLimit) {
   const dom = new JSDOM(res.data)
   const eventList = dom.window.document.querySelectorAll(".vevent")
 

@@ -69,7 +69,7 @@ export const getVenueFromDom = (dom: JSDOM): string => {
 */
 export const getSongFromDom = (element: Element): string => {
 
-  const songLabelSelector = '.songPart .songLabel'
+  const songLabelSelector = '.songPart'
   const songLink = element.querySelector<HTMLAnchorElement>(songLabelSelector)
 
   if (songLink === null) {

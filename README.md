@@ -45,7 +45,26 @@ bun run .
 
 ## Querying the database
 
-**What is the song that is most commonly performed with fans?**
+Here are some sample queries you can do in `data/lb.db` once the data has been scraped.
+
+**Which performances mention fans, or audience, or guest?**
+
+```sql
+select p.performanceId, p.notes from performances p
+where lower(p.notes) like "%fan%"
+or lower(p.notes) like "%audience%"
+or lower(p.notes) like "%guest%";
+```
+
+**How many times did Limp Bizkit play X song in the past Y days?**
+
+```sql
+select count(*) from performances p
+join songs s on p.songId = s.songId
+join concerts c on p.concertId = c.concertId
+where s.name is "{{X}}"
+and date(c.date) >= date('now', '-{{Y}} days');
+```
 
 ## Benchmarking
 
