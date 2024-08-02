@@ -73,3 +73,13 @@ Requires [hyperfine](https://github.com/sharkdp/hyperfine) to work.
 ```sh
 hyperfine 'bun run . ; sqlite3 data/lb.db ".read clean.sql"'
 ```
+
+```sql
+create view fan_instrument_performances as
+selct * from fan_performances fp
+where
+  lower(fp.notes) like "%guitar%" or
+  lower(fp.notes) like "%bass%" or
+  lower(fp.notes) like "%instrument%" or
+  lower(fp.notes) like "%band%" or
+```

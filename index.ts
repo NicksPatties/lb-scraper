@@ -15,6 +15,7 @@ import {
   addPerformance,
   getPerformance
 } from './db';
+import { exit } from 'process';
 
 /**
   Adds a song to the database. If the song is already in the database, then do nothing.
@@ -22,8 +23,8 @@ import {
   @returns true if the operation was successful, false if it didn't
 */
 
-let page = 1
-const pageLimit = 105 // inclusive todo make this read the dom from 
+let page = 54
+const pageLimit = 106 // inclusive todo make this read the dom from 
 const setListUrls: string[] = []
 const axiosOptions: AxiosRequestConfig = {
   validateStatus: (status) => status < 500
@@ -55,11 +56,19 @@ while (res.status === 200 && page <= pageLimit) {
   res = await axios.get(lbUrlBase + page, axiosOptions)
 }
 
+console.log("setListUrls")
+console.log(setListUrls)
+
+const problemUrls: string[] = []
 // iterate through the setlistUrls to get individual song performances
 // TODO remove slice from list
 for (const url of setListUrls) {
   res = await axios.get(url, axiosOptions)
-  if (res.status !== 200) continue
+  if (res.status !== 200) {
+    console.warn(`Didn't get OK status for ${url}, ${res.status}, continuing...?`)
+    problemUrls.push(url)
+    continue
+  }
 
   const dom = new JSDOM(res.data)
 
@@ -132,4 +141,13 @@ for (const url of setListUrls) {
       console.log(`Performance already in database! performanceId: ${performance.performanceId}`)
     }
   }
+}
+
+if (problemUrls.length > 0) {
+  console.warn("Had some issues with some concert URLs!")
+  console.warn(problemUrls)
+  exit(1)
+} else {
+  console.log("All concerts scraped successfully!")
+  exit(0)
 }
